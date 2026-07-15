@@ -1,3 +1,27 @@
+#include<iostream>
+#include<windows.h>
+using namespace std;
+#include<conio.h>
+#include<math.h>
+#include <stdlib.h>
+
+void gotoRowCol(int rpos, int cpos)
+{
+int xpos=cpos, ypos = rpos;
+COORD scrn;
+HANDLE hOuput = GetStdHandle(STD_OUTPUT_HANDLE);
+scrn.X = cpos;
+scrn.Y = rpos;
+SetConsoleCursorPosition(hOuput, scrn);
+}
+void sleep(int m)
+{
+ for(int j=0;j<m*21000;j++)
+ {
+ }
+}
+
+
 void upper_tri(int num, int extra,int tri2)
 {
     for(int a=tri2;a<num;a++)
